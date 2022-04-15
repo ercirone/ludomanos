@@ -1,0 +1,115 @@
+:root {
+  font-size: 16px;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  animation: headShake;
+  animation-duration: 0.75s;
+}
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(50, 50, 50);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Potta One", cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
+  margin: 0rem;
+  color: #ffe921ff;
+}
+
+h2 {
+  font-family: "Square Peg", cursive;
+  font-size: 4rem;
+  margin: 0rem;
+  font-weight: 400;
+}
+
+header,
+footer {
+  background-color: #13658cff;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+header,
+footer,
+main {
+  padding: 1rem 10%;
+}
+
+nav {
+  font-family: "Square Peg", cursive;
+  font-size: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  column-gap: 2rem;
+}
+
+.sel {
+  color: #ce918b;
+}
+
+.qs {
+  display: grid;
+  grid: "qs-texto qs-imagen";
+  grid-template-columns: 3fr 2fr;
+}
+
+.qs-imagen {
+  margin-top: 1.5rem;
+  justify-self: right;
+  max-width: 20rem;
+  width: 100%;
+}
+
+iframe {
+  margin-top: 1rem;
+  border-width: 0rem;
+  width: 100%;
+  height: 20rem;
+}
+
+.juegos h2 {
+  text-align: center;
+}
+
+.juegos-lista {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
