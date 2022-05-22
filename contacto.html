@@ -5,15 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="dice-solid.svg" sizes="any" type="image/svg+xml">
+  <link rel="icon" href="img/dice-solid.svg" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://unpkg.com/vue@3"></script>
   <script src="https://kit.fontawesome.com/6ae1eb3eb6.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Merriweather&family=Open+Sans&family=Potta+One&family=Roboto+Slab:wght@300;400&family=Roboto:wght@300;400&family=Square+Peg&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <title>Ludómanos</title>
 </head>
 
@@ -27,13 +28,30 @@
     </nav>
   </header>
 
-  <main>
-
+  <main class="main">
+    <section class="main-texto">
+      <h2>contacto</h2>
+      <div id="app">
+        <form @submit="validar" action="mailto:ludomanos@mail.com?subject=[LUDOMANOS]" method="post"
+          enctype="text/plain">
+          <label for="nom">Nombre</label>
+          <input type="text" id="nom" name="nombre" v-bind="atrNombre" v-model="nombre">
+          <label for="mail">Email</label>
+          <input type="email" id="mail" name="email" v-bind="atrEmail" v-model="email">
+          <label for="msj">Mensaje</label>
+          <textarea id="msj" name="mensaje" v-bind="atrMensaje" v-model="mensaje"></textarea>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </section>
+    <img class="main-imagen" src="img/peones.svg">
   </main>
 
   <footer>
     &#169; 2022 - Trabajo Práctico Codo a Codo - Emanuel Rodr&iacute;guez Cirone <i class="fa-brands fa-github"></i>
   </footer>
+
+  <script src="js/contacto.js"></script>
 </body>
 
 </html>

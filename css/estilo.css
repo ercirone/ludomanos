@@ -1,5 +1,11 @@
 :root {
   font-size: 16px;
+  --color-1: #13658cff;
+  --color-2: #ffe921ff;
+  --color-3: #ce918b;
+  --font-1: "Roboto", sans-serif;
+  --font-2: "Potta One", cursive;
+  --font-3: "Square Peg", cursive;
 }
 
 a:visited {
@@ -19,7 +25,7 @@ a:hover {
 body {
   margin: 0rem;
   padding: 0rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-1);
   font-weight: 400;
   color: rgba(50, 50, 50);
   display: grid;
@@ -28,33 +34,28 @@ body {
 }
 
 h1 {
-  font-family: "Potta One", cursive;
-  font-weight: 400;
+  font-family: var(--font-2);
   font-size: 1.5rem;
   margin: 0rem;
-  color: #ffe921ff;
+  color: var(--color-2);
 }
 
 h2 {
-  font-family: "Square Peg", cursive;
+  font-family: var(--font-3);
+  font-weight: 400;
   font-size: 3rem;
   margin: 0rem;
-  font-weight: 400;
 }
 
 header,
 footer {
-  background-color: #13658cff;
+  background-color: var(--color-1);
   color: white;
-}
-
-header {
   text-align: center;
 }
 
 footer {
   margin-top: 2rem;
-  text-align: center;
 }
 
 header,
@@ -64,7 +65,7 @@ main {
 }
 
 nav {
-  font-family: "Square Peg", cursive;
+  font-family: var(--font-3);
   font-size: 1.8rem;
   display: flex;
   flex-flow: row wrap;
@@ -73,14 +74,14 @@ nav {
 }
 
 .sel {
-  color: #ce918b;
+  color: var(--color-3);
 }
 
-.qs {
+.main {
   text-align: center;
 }
 
-.qs-imagen {
+.main-imagen {
   margin-top: 1.5rem;
   justify-self: right;
   max-width: 20rem;
@@ -111,6 +112,48 @@ iframe {
   max-width: min(400px, 90%);
 }
 
+input,
+textarea,
+label {
+  font-family: var(--font-1);
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0 1.5rem 0;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+}
+
+textarea {
+  height: 10rem;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: var(--color-1);
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.falta {
+  border-color: red;
+}
+
+.falta::placeholder {
+  color: red;
+  opacity: 0.8;
+}
+
 @media (min-width: 600px) {
   header,
   footer,
@@ -138,15 +181,15 @@ iframe {
     margin-top: 3em;
   }
 
-  .qs {
+  .main {
     text-align: left;
     display: grid;
-    grid: "qs-texto qs-imagen";
+    grid: "main-texto main-imagen";
     grid-template-columns: 3fr 1fr;
     column-gap: 2rem;
   }
 
-  .qs-imagen {
+  .main-imagen {
     margin-top: 1.5rem;
     justify-self: right;
     max-width: 20rem;
@@ -170,7 +213,7 @@ iframe {
     margin-bottom: 3rem;
   }
 
-  .qs {
+  .main {
     grid-template-columns: 3fr 2fr;
   }
 
